@@ -1,1 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.icon-divider {
+    text-align: center;
+    margin: 20px 0 24px;
+    font-size: 2rem;
+}
+
+.icon-divider i {
+    margin: 0 16px;
+    color: #2C3E50;
+}
+
+.icon-divider::before,
+.icon-divider::after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 8px;
+    width: 100%;
+    max-width: 7rem;
+    height: 0.25rem;
+    border-radius: 1rem;
+    background-color: #2C3E50;
+}
+
+.page-section-heading {
+    color: #2C3E50;
+    font-size: 2.25rem;
+    line-height: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 325px) {
+    .icon-divider::before,
+    .icon-divider::after {
+        max-width: 5.5rem;
+    }
+}
+
+section {
+    padding-top: calc(6rem + 74px);
+    padding-bottom: 6rem;
+}
+
+@media screen and (min-width: 992px) {
+    section {
+        padding-top: calc(6rem + 104px);
+    }
+    .page-section-heading {
+        font-size: 3rem;
+        line-height: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 1140px;
+    }
+}

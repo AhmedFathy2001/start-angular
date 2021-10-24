@@ -1,0 +1,77 @@
+.icon-divider {
+    color: #2c3e50;
+}
+
+.portfolio-item {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.portfolio-item-caption {
+    position: absolute;
+    transition: all .2s ease-in-out;
+    opacity: 0;
+}
+
+.portfolio-item-caption:hover {
+    opacity: 1;
+    background-color: rgba(26, 188, 156, 0.9);
+}
+
+.modal-content {
+    border-radius: 0.75rem;
+    border: none;
+}
+
+.rounded-custom {
+    border-radius: 0.5rem;
+}
+
+.modal-body {
+    padding: 4rem 1rem;
+}
+
+.col-lg-8 {
+    padding: 0 24px;
+}
+
+.row {
+    margin: 0;
+}
+
+.btn-color {
+    background-color: #1abc9c;
+    color: white;
+}
+
+.close-btn {
+    right: 1.5rem;
+    top: 1rem;
+    font-size: 3rem;
+    color: #1abc9c;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.modal .container {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    width: 100%;
+}
+
+.modal .container p {
+    font-family: 'Lato', sans-serif;
+}
+
+.fa-plus {
+    font-size: 4.5rem;
+}
+
+@media screen and (max-width:480px) {
+    .modal .icon-divider::after,
+    .modal .icon-divider::before {
+        max-width: 30%;
+    }
+}

@@ -1,0 +1,68 @@
+<section>
+    <h2 class="page-section-heading text-center text-uppercase mb-0">Contact Me</h2>
+    <div class="icon-divider text-nowrap">
+        <i class="fas fa-star"></i>
+    </div>
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-11 input-wrap form-group">
+                    <input ngModel #name="ngModel" class="input form-control" oninput="this.value = this.value.replace(/[^\u0621-\u064Aa-zA-Z\-_\s]/g, '')" required minlength="3" name="name" type="text" id="name" placeholder=" ">
+                    <label for="name">Name</label>
+                    <div @load *ngIf="name.invalid && (name.dirty || name.touched || submitClick)" class="alert alert-danger origin">
+
+                        <div *ngIf="name.errors?.required">
+                            Name is required.
+                        </div>
+                        <div *ngIf="name.errors?.minlength">
+                            Name must be at least 3 characters long.
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-8 col-11 input-wrap form-group">
+                    <input ngModel #email="ngModel" class="input form-control" required type="email" name="email" id="email" placeholder=" " pattern='^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$'>
+                    <label for="email">Email</label>
+                    <div @load *ngIf="email.invalid && (email.dirty || email.touched || submitClick)" class="alert alert-danger origin">
+                        <div *ngIf="email.errors?.required" class="animation validation-animation-fail">
+                            Email is required.
+                        </div>
+                        <div *ngIf="email.errors?.pattern">
+                            Enter a valid Email.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-11 input-wrap form-group">
+                    <input required ngModel #phone="ngModel" maxlength="13" class="input form-control" type="tel" oninput="this.value = this.value.replace(/[^0-9+]/g, '')" name="phone" pattern="^\+201[0-9]{9}" id="phone" placeholder=" ">
+                    <label for="phone">Phone</label>
+                    <div @load *ngIf="phone.invalid && (phone.dirty || phone.touched || submitClick)" class="alert alert-danger origin">
+                        <div *ngIf="phone.errors?.required">
+                            Phone number is required
+                        </div>
+                        <div *ngIf="phone.errors?.pattern">
+                            Enter a valid Phone number. (example: +201001210312)
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-11 input-wrap form-group">
+                    <textarea required ngModel #message="ngModel" [(ngModel)]="desc" minlength="30" maxlength="400" class="input form-control" name="message" id="message" rows="5" placeholder=" "></textarea>
+                    <label for="message">Message</label>
+                    <div @load *ngIf="message.invalid && (message.dirty || message.touched || submitClick)" class="alert alert-danger origin">
+                        <div *ngIf="message.errors?.required">
+                            Message is required.
+                        </div>
+                        <div *ngIf="message.errors?.minlength">
+                            Message must be atleast 30 characters long.
+                        </div>
+                    </div>
+                    <span class="text-black-50">You have {{400 - (desc ? desc.length : 0)}} characters remaining.</span>
+                </div>
+                <div class="col-lg-8 col-11 ps-0 transition origin" [ngClass]="isSubmited ? 'success' : 'fail'">
+                    <p class="alert alert-success">Your Message has been submitted!</p>
+                </div>
+                <div class="col-lg-8 btn-wrap col-11 form-group mt-3">
+                    <button class="btn btn-color" type="submit">Send</button></div>
+            </div>
+        </div>
+    </form>
+</section>

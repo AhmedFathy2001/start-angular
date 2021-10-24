@@ -1,0 +1,13 @@
+.icon-divider::before,
+.icon-divider::after {
+    background-color: white;
+}
+
+.section-bg {
+    background-color: #1abc9c;
+}
+
+p {
+    font-size: 1.25rem;
+    font-family: 'Lato', sans-serif;
+}

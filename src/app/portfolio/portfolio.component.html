@@ -1,0 +1,106 @@
+<section class="page-section portfolio">
+
+    <div class="container">
+        <h2 class="page-section-heading text-center text-uppercase mb-0">Portfolio</h2>
+        <div class="icon-divider text-nowrap">
+            <i class="fas fa-star"></i>
+        </div>
+
+        <div class="row justify-content-center">
+
+            <div class="col-md-6 col-lg-4 px-4 mb-5">
+                <div class="portfolio-item mx-auto" (click)="getAttrName($event)">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption-content text-center text-white">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="assets/images/cabin.png" alt="" data-name="LOG CABIN" data-description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae
+                        quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.">
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 px-4 mb-5">
+                <div class="portfolio-item mx-auto" (click)="getAttrName($event)">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption-content text-center text-white">
+                            <i class="fas fa-plus fa-3x"></i></div>
+                    </div>
+                    <img class="img-fluid" src="assets/images/cake.png" alt="" data-name="TASTY CAKE" data-description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae
+                        quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.">
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 px-4 mb-5">
+                <div class="portfolio-item mx-auto" (click)="getAttrName($event)">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption-content text-center text-white">
+                            <i class="fas fa-plus fa-3x"></i></div>
+                    </div>
+                    <img class="img-fluid" src="assets/images/circus.png" alt="" data-name="CIRCUS TENT" data-description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae
+                        quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.">
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 px-4 mb-5 mb-lg-0">
+                <div class="portfolio-item mx-auto" (click)="getAttrName($event)">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption-content text-center text-white">
+                            <i class="fas fa-plus fa-3x"></i></div>
+                    </div>
+                    <img class="img-fluid" src="assets/images/game.png" alt="" data-name="CONTROLLER" data-description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae
+                        quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.">
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 px-4 mb-5 mb-md-0">
+                <div class="portfolio-item mx-auto" (click)="getAttrName($event)">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption-content text-center text-white">
+                            <i class="fas fa-plus fa-3x"></i></div>
+                    </div>
+                    <img class="img-fluid" src="assets/images/safe.png" alt="" data-name="LOCKED SAFE" data-description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae
+                        quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.">
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 px-4">
+                <div class="portfolio-item mx-auto" (click)="getAttrName($event)">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption-content text-center text-white">
+                            <i class="fas fa-plus fa-3x"></i></div>
+                    </div>
+                    <img class="img-fluid" src="assets/images/submarine.png" alt="" data-name="SUBMARINE" data-description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae
+                        quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Button trigger modal -->
+<button (click)="ngAfterViewInit()" #modalBtn type="button" class="d-none" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <i data-bs-dismiss="modal" aria-label="Close" class="fas fa-times position-absolute close-btn"></i>
+            <div class="modal-body text-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <h2 #title class="mb-0"></h2>
+                            <div class="icon-divider text-nowrap">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div><img #modalImg class="img-fluid mb-5 rounded-custom"></div>
+                            <p #desc class="mb-5"></p>
+                            <button type="button" class="btn btn-color" data-bs-dismiss="modal"><i class="fas fa-times me-2"></i>Close Window</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

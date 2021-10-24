@@ -1,0 +1,41 @@
+.main-wrapper {
+    font-family: 'Lato', sans-serif;
+    background-color: #1abc9c;
+    min-height: 100vh;
+    padding-top: calc(6rem + 74px);
+    padding-bottom: 6rem;
+}
+
+.image-wrapper {
+    width: 15rem;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 2.75rem;
+    line-height: 2.75rem;
+}
+
+.icon-divider::before,
+.icon-divider::after {
+    background-color: white;
+}
+
+p {
+    font-size: 1.25rem;
+}
+
+@media screen and (min-width: 992px) {
+    .main-wrapper {
+        padding-top: calc(6rem + 104px);
+        padding-bottom: 6rem;
+    }
+    h1 {
+        font-size: 4rem;
+        line-height: 3.5rem;
+    }
+    p {
+        font-size: 1.5rem;
+    }
+}
